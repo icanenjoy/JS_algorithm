@@ -5,6 +5,6 @@ function solution(x) {
         num += x%10;
         x = parseInt(x/10);
     }
-    if(xx%num ===0) return true;
-    else return false;
+    
+    return xx % num === 0;
 }
