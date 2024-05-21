@@ -1,8 +1,9 @@
 function solution(d, budget) {
-    d = d.sort();
-    let ans =0;
-    while(budget>0){
+    d = d.sort((a,b)=>a-b);
+    let ans = 0;
+    while(1){
         budget -= d[ans];
+        if(budget<0 || ans===d.length) break;
         ans++;
     }
     return ans;
@@ -13,7 +14,7 @@ function solution(d, budget) {
 
 
 
-function solution(d, budget) {
+function solution1(d, budget) {
     d.sort((a,b)=>a-b); //작은 값부터 정렬
     if(d[0]> budget) return 0; //만약 첫 값부터 예산 초과면 0리턴
     
