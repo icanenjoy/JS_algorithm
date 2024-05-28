@@ -1,4 +1,11 @@
 function solution(nums) {
+    return Math.min(Math.floor(nums.length/2),[...new Set(nums)].length);
+    
+}
+
+
+
+function solution1(nums) {
     let hash = new Map();
     nums.forEach((i)=>{
         hash.has(i)? hash.set(i,hash.get(i)+1) : hash.set(i,1);
