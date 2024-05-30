@@ -5,9 +5,12 @@ function solution(number, limit, power) {
         for(let j=1;j<=Math.sqrt(i);j++){
             if(i%j===0) article +=2;
             if(j*j===i) article--;
+            if(article>limit){
+                article = power;
+                break;
+            }
         }
-        if(article > limit) ans+=power;
-        else ans += article;
+        ans += article;
     }
     return ans;
 }
